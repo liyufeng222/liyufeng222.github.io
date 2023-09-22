@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #1c2227;
+    padding: 0px 0;
+    line-height: 0px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    opacity: 70%;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 24px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #403e3e;
+    color: #a29a9a;
+    font: bold;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.intro-and-pic {
+    display: flex;
+    flex-direction: row;
+}
+
+.intro {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+.intro h1 {
+    font-size: 36px;
+}
+
+.intro p {
+    font-size: 18px;
+}
+
+.profile-pic {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-pic img {
+    max-width: 380px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    align-self: center;
+}
+
+.iconList {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.iconList a {
+    height: 25px;
+    width: 25px;
+    color: black;
+}
+
+.headerName {
+    color: white;
+}
+
+.headerDepart {
+    color: rgb(181, 207, 226);
+    padding-left: 150px;
+    padding-right: 200px;
+}
+
+.codeIcon {
+    height: 50px;
+    width: 50px;
+}

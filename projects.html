@@ -8,24 +8,68 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="navbar">
-        <div class="container">
-            <img class="codeIcon" src="coding_icon.png" alt="icon">
-            <h2 class="headerName">Yufeng Li</h1>
-            <h2 class="headerDepart">|</h1>
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="mailto:liyufeng8200@gmail.com">Contact Me</a>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="intro-and-pic">
-            <div class="intro">
-                <h1>Coming soon!!!</h1>
-                <p>(You can check my LinkedIn and resume in the Home page for now)</p>
+    <aside id="sidebar" data-testid="sidebar">
+        <div>
+            <div>
+                <div class="firstBlock">
+                    <img class="codeIcon" src="coding_icon.png" alt="icon">
+                    <h2 class="headerName">Yufeng Li</h2>
+                </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="mailto:liyufeng8200@gmail.com">Contact Me</a></li>
+            </ul>
             </div>
         </div>
-    </div>
+    </aside>
+    <main>
+        <div class="navbar">
+            <div class="container">
+                <div class="firstBlock">
+                    <img class="codeIcon" src="coding_icon.png" alt="icon">
+                    <h2 class="headerName">Yufeng Li</h1>
+                </div>
+                <h2 class="headerDepart">|</h1>
+                <div class="secondBlock">
+                    <a href="index.html">Home</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="mailto:liyufeng8200@gmail.com">Contact Me</a>
+                    
+                </div>
+                <div class="menu-button">
+                    <a id="sidebar-button" data-testid="sidebar-button">☰</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="container">
+            <div class="intro-and-pic">
+                <div class="intro">
+                    <h1>Coming soon!!!</h1>
+                    <p>(You can check my LinkedIn and resume in the Home page for now)</p>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
+
+<script>
+    const sidebarButton = document.getElementById("sidebar-button");
+    const sidebar = document.getElementById("sidebar");
+
+    sidebarButton.addEventListener("click", (event) => {
+        console.log("Click");
+        const sidebarIsOpen = sidebar.classList.contains("opened");
+
+        if (sidebarIsOpen) {
+            console.log("Close");
+            sidebar.classList.remove("opened");
+        } else {
+            console.log("Open");
+            sidebar.classList.add("opened");
+        }
+    });
+</script>
+
 </html>
